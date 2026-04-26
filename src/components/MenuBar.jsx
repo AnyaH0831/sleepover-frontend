@@ -123,7 +123,7 @@ export default function MenuBar({ isDarkMode, toggleDarkMode, currentView, onVie
         {/* Left side - Dream Journal title */}
         <div>
           <h1 style={styles.title}>
-            Dream Journal
+            Dreamary
           </h1>
         </div>
 
