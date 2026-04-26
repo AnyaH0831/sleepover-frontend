@@ -1,6 +1,6 @@
 // ─── API Base URL Configuration ───────────────────────────────────────────────
 // Uses environment variable for backend URL, defaults to localhost for development
-export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001'
+export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
 
 // ─── Magic Hour key rotation ──────────────────────────────────────────────────
 // Reads up to 10 Magic Hour API keys from .env and rotates when one is exhausted.
