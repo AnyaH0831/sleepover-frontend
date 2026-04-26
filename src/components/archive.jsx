@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001';
+
 export default function Archive({ isDarkMode }) {
   const [dreams, setDreams] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -26,7 +28,7 @@ export default function Archive({ isDarkMode }) {
   const fetchDreams = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:3001/api/dreams');
+      const response = await fetch(`${API_BASE_URL}/api/dreams`);
       if (!response.ok) throw new Error('Failed to fetch dreams');
       const data = await response.json();
       setDreams(Array.isArray(data) ? data : data.dreams || []);

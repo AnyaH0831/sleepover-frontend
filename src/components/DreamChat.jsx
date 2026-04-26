@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { generateDreamVideo, pollVideoJob } from '../api.js';
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001';
+
 export default function DreamChat({ isDarkMode }) {
   const [dreamText, setDreamText] = useState('');
   const [videoLength, setVideoLength] = useState(5);
@@ -27,7 +29,7 @@ export default function DreamChat({ isDarkMode }) {
       console.log('Job created:', jobId);
 
       // Save dream to MongoDB
-      const saveDreamRes = await fetch('http://localhost:3001/api/save-dream', {
+      const saveDreamRes = await fetch(`${API_BASE_URL}/api/save-dream`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ description: text, jobId })
