@@ -2,6 +2,8 @@
 
 Save your dreams forever to relive through the dream journal. It creates videos so you can relive the full experience of the dream again.
 
+Our backend is in this repo: https://github.com/AnyaH0831/sleepover-backend
+
 ## Features
 
 - Add your dream to the dream archive
